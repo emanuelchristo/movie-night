@@ -224,6 +224,14 @@ export const actions = {
     });
   },
 
+  async setRoomInfo({ commit, state }, data) {
+    this.$socket.emit("room:setroominfo", {
+      userId: state.userId,
+      roomId: state.room.id,
+      data
+    });
+  },
+
   async stop({ commit, state }) {
     this.$socket.emit("room:stop", {
       userId: state.userId,

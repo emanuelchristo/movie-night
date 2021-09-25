@@ -1,6 +1,10 @@
 <template>
   <modal v-if="show" @close="$emit('close')">
-    <form @submit="save" @reset="$emit('close')" class="modal-content-wrapper">
+    <form
+      @submit.prevent="save"
+      @reset="$emit('close')"
+      class="modal-content-wrapper"
+    >
       <div class="content">
         <div style="height: 2rem"></div>
         <span class="mdi mdi-paperclip icon"></span>
@@ -37,10 +41,16 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
+
 export default {
   props: ["show", "info"],
   methods: {
-    save() {}
+    ...mapActions(["setRoomInfo"]),
+    save() {
+      this.setRoomInfo(this.info);
+      this.$emit("close");
+    }
   }
 };
 </script>
