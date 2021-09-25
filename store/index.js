@@ -131,12 +131,11 @@ export const actions = {
     this.$socket.emit("room:get", roomId, room => {
       console.log("fetchRoom res:", { room });
       commit("setRoom", room);
-
-      // Subscribing to room changes
-      this.$socket.on("room:updated", room => {
-        console.log("roomUpdated: ", { room });
-        commit("setRoom", room);
-      });
+    });
+    // Subscribing to room changes
+    this.$socket.on("room:updated", room => {
+      console.log("roomUpdated: ", { room });
+      commit("setRoom", room);
     });
   },
 

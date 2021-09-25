@@ -28,7 +28,7 @@ export default {
   ],
 
   env: {
-    SERVER_URL: process.env.SERVER_URL || "http://localhost:3000"
+    SERVER_URL: process.env.SERVER_URL || "http://localhost:5000"
   },
 
   // Plugins to run before rendering page
@@ -44,7 +44,7 @@ export default {
   modules: ["@nuxtjs/axios", "nuxt-clipboard"],
 
   axios: {
-    baseURL: "https://movie-night-cris.herokuapp.com/" // Used as fallback if no runtime config is provided
+    // baseURL: "https://movie-night-cris.herokuapp.com/" // Used as fallback if no runtime config is provided
   },
 
   // Build Configuration
