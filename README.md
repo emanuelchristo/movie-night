@@ -11,6 +11,12 @@
 
 ## ⭐️ [Demo](https://movie-night-cris.netlify.app/)
 
+## 🏙 Screenshots
+
+![Player](./screenshots/screenshot_1.png)
+![Adding video](./screenshots/screenshot_2.png)
+![Waiting for host](./screenshots/screenshot_3.png)
+
 ## 💿 Usage
 
 ```sh
@@ -27,6 +33,14 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
+
+## ‼️ Note
+
+This is the frontend of the web app. You can get the server [here](https://github.com/emanuelchristo/movie-night-server)
+
+## 🌳 Environment Variables
+
+On deploying set `SERVER_URL` env var to the server's url
 
 ## 🪜 Steps
 
