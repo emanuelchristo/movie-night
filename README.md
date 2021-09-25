@@ -1,10 +1,19 @@
-# ⭐️ Movie Night
+# 🍿 Movie Night
 
-Website to play local video files in sync with your friends for a great movie night!
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-## Build Setup
+> Web app to play local video files and youtube videos in sync with your friends for a great movie night!
 
-```bash
+## ⭐️ [Demo](https://movie-night-cris.netlify.app/)
+
+## 💿 Usage
+
+```sh
 # install dependencies
 $ yarn install
 
@@ -19,8 +28,63 @@ $ yarn start
 $ yarn generate
 ```
 
-Frontend using [Nuxt.js](https://nuxtjs.org)
+## 🪜 Steps
 
-## Developer
+1. Create a room ➕
+2. Add a name and thumbnail 🌆
+3. Add video 🎬
+4. Invite your friends 🕺
+5. Chill 🍿
 
-[Emanuel Christo](https://instagram.com/emanuel.christo)
+## 💎 Features
+
+🔮 Beautiful UI  
+🔥 Fast realtime updates  
+⌛️ No refreshes needed  
+📺 Floating video  
+📄 Subtitles
+
+## ❓ FAQs
+
+#### 1. What can I do with this?
+
+> Watch video (local files and youtube) in sync with your friends
+
+#### 2. Does that mean all my friends should have the same video file?
+
+> Yes, if you want to watch videos from you device. You can also watch youtube videos by just adding its link
+
+#### 3. Do I have to login to use this?
+
+> Absolutely no. All you have to give is a nickname - whatever you prefer
+
+## 🚗 Roadmap
+
+- Add voice chat
+- Add text chat
+- Responsive UI
+- Add more host controls
+- [Random Movie](https://github.com/emanuelchristo/random-movie) integration
+- Movie brainstorming board
+- Streaming
+- Social media of cinephiles
+
+## 🧑‍💻 Author
+
+Emanuel Christo
+
+## 🔗 Links
+
+[![github](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/emanuelchristo)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emanuelchristo/)
+[![twitter](https://img.shields.io/badge/instagram-f76623?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/emanuel.christo)
+
+## 📄 License
+
+MIT
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
