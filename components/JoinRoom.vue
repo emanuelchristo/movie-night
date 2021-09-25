@@ -56,7 +56,7 @@ export default {
     ...mapActions(["joinRoom", "fetchRoom"])
   },
   created() {
-    this.fetchRoom(this.$route.params.room);
+    // this.fetchRoom(this.$route.params.room);
   }
 };
 </script>
