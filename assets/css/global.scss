@@ -1,0 +1,163 @@
+@import "~/assets/css/_variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  --plyr-color-main: linear-gradient(
+    150deg,
+    rgba(190, 0, 235, 1) 0%,
+    rgba(78, 0, 183, 1) 100%
+  );
+  --plyr-video-background: rgba(255, 255, 255, 1);
+
+  --plyr-badge-border-radius: 5px;
+  --plyr-badge-background: rgb(197, 0, 0);
+  --plyr-badge-text-color: #fff;
+
+  --plyr-captions-text-color: rgb(255, 187, 0);
+  --plyr-captions-background: rgba(0, 0, 0, 0.459);
+
+  --plyr-control-spacing: 12px;
+  // --plyr-video-control-background-hover: rgba(255, 255, 255, 0.3);
+
+  --plyr-menu-background: rgb(19, 20, 26);
+  --plyr-menu-color: rgba(255, 255, 255, 0.8);
+  --plyr-menu-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+
+  --plyr-video-progress-buffered-background: rgba(255, 255, 255, 0.4);
+  --plyr-range-track-height: 3px;
+  --plyr-range-fill-background: rgb(116, 6, 206);
+  --plyr-video-range-track-background: rgba(255, 255, 255, 0.3);
+
+  --plyr-tooltip-background: rgb(19, 20, 26);
+  --plyr-tooltip-color: rgba(255, 255, 255, 0.8);
+  --plyr-tooltip-radius: 100px;
+
+  --plyr-font-smoothing: true;
+}
+
+.player-wrapper {
+  span {
+    font-size: 0.9rem;
+  }
+  button {
+    width: fit-content;
+    height: fit-content;
+  }
+  button:hover {
+    box-shadow: none;
+  }
+}
+
+body {
+  color: #fff;
+  background: rgb(17, 17, 34);
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(rgb(116, 6, 206), 0.7);
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center-col {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 55px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  @include gradient;
+  border: none;
+  border-radius: 300px;
+  color: #fff;
+  cursor: pointer;
+  padding-bottom: 2px;
+  transition: $trans-med;
+  span {
+    margin-right: 0.3rem;
+    font-size: 1.6rem;
+  }
+}
+button:hover,
+.button:hover {
+  box-shadow: 0 0.4rem 1.5rem rgb(103, 14, 204),
+    0 0.5rem 2rem rgba(204, 14, 195, 0.4);
+
+  box-shadow: rgba(208, 46, 240, 0.4) 2px 3px, rgba(195, 46, 240, 0.3) 4px 6px,
+    rgba(169, 46, 240, 0.2) 6px 9px, rgba(208, 46, 240, 0.1) 8px 12px;
+}
+button:active,
+.button:active {
+  box-shadow: none;
+}
+
+.button-outline {
+  background: none;
+  border: 1px solid #fff;
+  transition: $trans-med;
+}
+.button-outline:hover {
+  background: rgba(#fff, 0.05);
+}
+.button-outline:active {
+  background: none;
+  box-shadow: none;
+}
+
+.input-wrapper {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-flow: column;
+}
+
+label {
+  font-size: 0.8rem;
+  color: rgba(#fff, 0.7);
+}
+input {
+  width: 240px;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.75rem 1.1rem;
+  margin-top: 0.4rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(#fff, 0.1);
+  background: rgba(#fff, 0.05);
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.1);
+}
+input::placeholder {
+  color: rgba(#fff, 0.2);
+}

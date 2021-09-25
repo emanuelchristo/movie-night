@@ -1,0 +1,34 @@
+$grid-line-color: rgba(#fff, 0.06);
+
+$trans-short: ease-out all 0.1s;
+$trans-med: ease-out all 0.3s;
+
+@mixin gradient {
+  background: rgb(190, 0, 235);
+  background: linear-gradient(
+    150deg,
+    rgba(190, 0, 235, 1) 0%,
+    rgba(78, 0, 183, 1) 100%
+  );
+}
+
+$menu-bg-color: rgb(19, 20, 26);
+
+@mixin red {
+  background: rgb(223, 0, 0);
+  background: linear-gradient(150deg, rgb(233, 0, 0) 0%, rgb(144, 5, 5) 100%);
+}
+
+.red {
+  @include red;
+}
+
+@mixin audio-gradient {
+  background: rgb(0, 224, 58);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 224, 58, 1) 0%,
+    rgba(255, 233, 0, 1) 62%,
+    rgba(242, 1, 1, 1) 100%
+  );
+}
