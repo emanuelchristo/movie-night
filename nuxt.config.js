@@ -1,5 +1,5 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  // Global page headers
   head: {
     title: "Movie Night",
     htmlAttrs: {
@@ -21,35 +21,33 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS
   css: [
     "~/assets/css/global.scss",
     "@mdi/font/css/materialdesignicons.min.css"
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  env: {
+    SERVER_URL: process.env.SERVER_URL || "http://localhost:3000"
+  },
+
+  // Plugins to run before rendering page
   plugins: [
     { src: "~/plugins/vue-plyr", mode: "client" },
-    { src: "~/plugins/js-cookie", mode: "client" },
     { src: "~/plugins/srt-webvtt", mode: "client" },
     { src: "~/plugins/socket-io", mode: "client" },
     { src: "~/plugins/ping", mode: "client" }
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/axios", "nuxt-clipboard"],
 
   axios: {
     baseURL: "https://movie-night-cris.herokuapp.com/" // Used as fallback if no runtime config is provided
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  // Build Configuration
   build: {},
   server: {
     host: "0.0.0.0"
