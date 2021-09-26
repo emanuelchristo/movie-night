@@ -14,8 +14,9 @@
 ## 🏙 Screenshots
 
 ![Player](./screenshots/screenshot_1.png)
-![Adding video](./screenshots/screenshot_2.png)
-![Waiting for host](./screenshots/screenshot_3.png)
+![Landing page](./screenshots/screenshot_2.png)
+![Creating room](./screenshots/screenshot_3.png)
+![Waiting for host](./screenshots/screenshot_4.png)
 
 ## 💿 Usage
 
