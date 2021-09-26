@@ -2,30 +2,41 @@
   <div class="container">
     <span class="mdi mdi-set-center icon"></span>
     <h2><span style="font-weight: 300">Join</span>Room</h2>
-    <form @submit="joinRoomLocal">
-      <div :class="`inputs-wrapper ${loggedIn ? 'margin-adjust' : ''}`">
+    <form @submit.prevent="joinRoomLocal">
+      <div class="inputs-wrapper" style="margin: 3rem 0">
+        <div class="new-user-image" ref="newUserImage">
+          <span class="mdi mdi-jellyfish"></span>
+        </div>
         <div class="input-wrapper">
-          <label>Room code or link*</label>
+          <label>Room code*</label>
           <input
             type="text"
+            placeholder="Room code*"
             v-model="roomCode"
-            placeholder="Room code or link*"
+            minlength="6"
+            maxlength="6"
+            required
           />
         </div>
-        <div class="input-wrapper" v-if="!loggedIn">
-          <label>Nickname*</label>
-          <input type="text" v-model="nickName" placeholder="Nickname*" />
-        </div>
       </div>
-      <button type="submit">Join</button>
+      <button>Join</button>
     </form>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
 export default {
-  layout: "landing"
+  layout: "landing",
+  data() {
+    return {
+      roomCode: null
+    };
+  },
+  methods: {
+    joinRoomLocal() {
+      this.$router.push(`/${this.roomCode}`);
+    }
+  }
 };
 </script>
 
@@ -36,15 +47,26 @@ button {
   margin: 0 auto;
 }
 
+.new-user-image {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: rgba(#fff, 0.1);
+  margin-bottom: 1rem;
+  span {
+    font-size: 2rem;
+  }
+}
+
 .inputs-wrapper {
-  margin: 2.5rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-}
-.margin-adjust {
-  margin: 3rem 0;
 }
 
 .icon {
