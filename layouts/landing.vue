@@ -54,7 +54,8 @@ export default {
 }
 
 .modal-card {
-  width: 340px;
+  min-width: 340px;
+  width: fit-content;
   height: fit-content;
   min-height: 500px;
   display: flex;
