@@ -14,7 +14,7 @@
     "core-js": "^3.18.0",
     "nuxt": "^2.15.8",
     "nuxt-clipboard": "0.0.4",
-    "socket.io-client": "^2.4.0",
+    "socket.io-client": "^4.2.0",
     "vue-plyr": "^7.0.0"
   },
   "devDependencies": {
