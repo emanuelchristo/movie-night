@@ -1,6 +1,7 @@
-const serverUrl = "https://movie-night-cris.herokuapp.com/";
-
 setInterval(() => {
   console.log("ping");
-  fetch(serverUrl);
-}, 3 * 60 * 1000);
+  fetch(process.env.SERVER_URL + "/ping").catch(err => {
+    console.log("ping failed");
+    console.error(err);
+  });
+}, 3000);
