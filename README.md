@@ -9,7 +9,7 @@
 
 > Web app to play local video files and youtube videos in sync with your friends for a great movie night!
 
-## ⭐️ [Demo](https://movie-night-cris.netlify.app/)
+## ⭐️ [Demo](https://movienight.ecris.in/)
 
 ## 🏙 Screenshots
 
